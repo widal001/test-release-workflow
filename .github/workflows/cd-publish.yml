@@ -1,8 +1,12 @@
 name: "CD - Publish to npm (dry run)"
 
 on:
-  release:
-    types: [published]
+  workflow_call:
+    inputs:
+      tag:
+        description: "Git tag to publish (e.g., v0.1.0)"
+        required: true
+        type: string
   workflow_dispatch:
     inputs:
       tag:
@@ -16,18 +20,9 @@ jobs:
     permissions:
       contents: read
     steps:
-      - name: Determine ref
-        id: config
-        run: |
-          if [ "${{ github.event_name }}" = "release" ]; then
-            echo "ref=${{ github.event.release.tag_name }}" >> "$GITHUB_OUTPUT"
-          else
-            echo "ref=${{ github.event.inputs.tag }}" >> "$GITHUB_OUTPUT"
-          fi
-
       - uses: actions/checkout@v6
         with:
-          ref: ${{ steps.config.outputs.ref }}
+          ref: ${{ inputs.tag }}
 
       - uses: pnpm/action-setup@v5
         with:
@@ -45,7 +40,7 @@ jobs:
 
       - name: Publish (dry run)
         run: |
-          echo "=== DRY RUN — would publish from tag ${{ steps.config.outputs.ref }} ==="
+          echo "=== DRY RUN — would publish from tag ${{ inputs.tag }} ==="
           pnpm pack --pack-destination /tmp
           echo ""
           echo "Package contents:"
