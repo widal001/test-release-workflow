@@ -14,7 +14,8 @@
   "packages": {
     ".": {
       "package-name": "@widal001/test-release-workflow",
-      "changelog-path": "CHANGELOG.md"
+      "changelog-path": "CHANGELOG.md",
+      "initial-version": "0.1.0"
     }
   }
 }
