@@ -1,2 +1,2 @@
-export const greet = (name: string) => `Hello, ${name}!`;
-export const handleNull = (val: unknown) => val ?? "default";
+export const sayHello = (name: string) => `Hello, ${name}!`;
+export const withDefault = (val: unknown, fallback = "default") => val ?? fallback;
