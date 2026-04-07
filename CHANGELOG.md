@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/widal001/test-release-workflow/compare/v0.3.1...v0.3.2) (2026-04-07)
+
+
+### Bug Fixes
+
+* Add id-token permission to publish job in cd-release ([371cdbb](https://github.com/widal001/test-release-workflow/commit/371cdbb9d76fc05b66716fcd7fea5c2b327aee69))
+
 ## [0.3.1](https://github.com/widal001/test-release-workflow/compare/v0.3.0...v0.3.1) (2026-04-07)
 
 
