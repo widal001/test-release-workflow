@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/widal001/test-release-workflow/compare/v0.3.0...v0.3.1) (2026-04-07)
+
+
+### Refactoring
+
+* Extract default value to constant ([9155d1c](https://github.com/widal001/test-release-workflow/commit/9155d1c67494f80f6379be6cb8fb157c82c4bb69))
+
 ## [0.3.0](https://github.com/widal001/test-release-workflow/compare/v0.2.0...v0.3.0) (2026-04-07)
 
 
