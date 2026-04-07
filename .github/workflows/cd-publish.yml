@@ -1,4 +1,4 @@
-name: "CD - Publish to npm"
+name: "CD - Publish to npm (dry run)"
 
 on:
   release:
@@ -13,12 +13,8 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    environment:
-      name: npm
-      url: https://www.npmjs.com/package/@common-grants/cg-grants-gov
     permissions:
       contents: read
-      id-token: write
     steps:
       - name: Determine ref
         id: config
@@ -47,9 +43,12 @@ jobs:
 
       - run: pnpm run ci
 
-      - name: Publish
-        env:
-          # TODO: Replace with trusted publishers after initial release
-          # https://github.com/common-grants/ts-cg-grants-gov/issues/4
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: pnpm publish --provenance --access public --no-git-checks
+      - name: Publish (dry run)
+        run: |
+          echo "=== DRY RUN — would publish from tag ${{ steps.config.outputs.ref }} ==="
+          pnpm pack --pack-destination /tmp
+          echo ""
+          echo "Package contents:"
+          ls -lh /tmp/*.tgz
+          echo ""
+          pnpm publish --access public --no-git-checks --dry-run

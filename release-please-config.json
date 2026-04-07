@@ -13,7 +13,7 @@
   ],
   "packages": {
     ".": {
-      "package-name": "@common-grants/cg-grants-gov",
+      "package-name": "@widal001/test-release-workflow",
       "changelog-path": "CHANGELOG.md"
     }
   }
