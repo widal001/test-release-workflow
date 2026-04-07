@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/widal001/test-release-workflow/compare/v0.4.0...v0.5.0) (2026-04-07)
+
+
+### Features
+
+* Add formatGreeting helper ([ba7a7e2](https://github.com/widal001/test-release-workflow/commit/ba7a7e29f85e4f0e264ae99b2e2345da39a92f80))
+
 ## [0.4.0](https://github.com/widal001/test-release-workflow/compare/v0.3.2...v0.4.0) (2026-04-07)
 
 
