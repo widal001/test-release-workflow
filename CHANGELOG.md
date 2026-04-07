@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0](https://github.com/widal001/test-release-workflow/compare/v0.2.0...v0.3.0) (2026-04-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* Rename exported functions
+
+### Features
+
+* Rename exported functions ([c510663](https://github.com/widal001/test-release-workflow/commit/c510663cc4b2e8d51ecb158cd6b1813100aa76a8))
+
+
+### Documentation
+
+* Add LICENSE file ([5aebb2e](https://github.com/widal001/test-release-workflow/commit/5aebb2e6813b832fd8a4aecf50c46699ea3d46bf))
+
 ## [0.2.0](https://github.com/widal001/test-release-workflow/compare/v0.1.0...v0.2.0) (2026-04-07)
 
 
