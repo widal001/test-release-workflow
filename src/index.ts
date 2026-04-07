@@ -1,2 +1,2 @@
-export const hello = () => "Hello from test-release-workflow";
+export const greet = (name: string) => `Hello, ${name}!`;
 export const handleNull = (val: unknown) => val ?? "default";
